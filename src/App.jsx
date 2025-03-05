@@ -45,8 +45,32 @@ function App() {
     mediaQuery.addEventListener("change", updateLayout);
   }
 
+  function createBox() {
+    let box = document.createElement("div");
+    box.classList.add("box");
+
+    let randomLeft = Math.random() * window.innerWidth;  
+    let randomSize = Math.random() * 40 + 40; 
+    let randomDelay = Math.random() * 2; 
+
+    box.style.left = `${randomLeft}px`;
+    box.style.width = `${randomSize}px`;
+    box.style.height = `${randomSize}px`;
+    box.style.animationDelay = `${randomDelay}s`;
+
+    document.querySelector(".container_anim").appendChild(box);
+
+    setTimeout(() => {
+        box.remove();
+    }, 2000);
+}
+
+setInterval(createBox, 300);
+
   return (
+    <><div class="container_anim"></div>
     <div className={theme ? 'theme-dark' + ' main_container w-100 d-flex' : 'theme-light' + ' main_container w-100 d-flex'}>
+      
       <Router>
       <FaBars className='bar_icon' onClick={sidebar}/>
         <Sidebar/>
@@ -76,6 +100,8 @@ function App() {
         </section>
       </Router>
     </div>
+    
+    </>
   )
 }
 
