@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@300;400;700&display=swap');
+body {
+  font-family: 'Exo 2', sans-serif;
+}
+a{
+  text-decoration: none !important;
+}
+::-webkit-scrollbar {
+  width: 8px; /* Scrollbar ki width */
+}
+
+/* Scrollbar Track (Background) */
+::-webkit-scrollbar-track {
+  background: rgba(250,250,250,0.4); 
+  border-radius: 5px;
+}
+
+/* Scrollbar Thumb (Moving Part) */
+::-webkit-scrollbar-thumb {
+  background: rgba(200,200,200,0.7);  
+  border-radius: 5px;
+}
+
+/* Hover Effect on Thumb */
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(200,200,200,0.9);
+}
