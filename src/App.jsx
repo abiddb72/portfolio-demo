@@ -50,7 +50,7 @@ function App() {
     box.classList.add("box");
 
     let randomLeft = Math.random() * window.innerWidth;  
-    let randomSize = Math.random() * 40 + 40; 
+    let randomSize = Math.random() * 50 + 50; 
     let randomDelay = Math.random() * 2; 
 
     box.style.left = `${randomLeft}px`;

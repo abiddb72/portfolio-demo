@@ -12,8 +12,10 @@
   position: absolute;
   width: 50px;
   height: 50px;
-  border:10px solid #b700ff;
-  animation: floatUp 4s ease-in-out forwards;
+  animation: floatUp 3s ease-in-out forwards;
+  border-width: 8px;
+  border-style: solid;
+  border-color: #4400ff;
   border-radius: 10px;
   bottom: -100px;
 }
@@ -21,20 +23,23 @@
   0% {
       bottom: -100px;
       transform: rotate(0deg);
-      opacity: 0.7;
+      opacity: 0.8;
       border-radius: 10px;
+      border-color: #4400ff;
   }
   50% {
-      bottom: 750px;
+      bottom: 800px;
       transform: rotate(180deg);
-      opacity: 0.3;
+      opacity: 0.4;
       border-radius: 20px;
+      border-color: #ff1c64;
   }
   100% {
-      bottom: 1800px;
+      bottom: 2100px;
       transform: rotate(360deg);
       opacity: 0;
       border-radius: 100px;
+      border-color: #ff9d00;
   }
 }
 a{
@@ -51,6 +56,7 @@ a:hover{
 }
 .main_container{
   min-height: 100vh;
+  z-index: -2;
 }
 .theme-light p{
   color: #1a1a1b;
@@ -80,6 +86,7 @@ a:hover{
 .content{
   margin-left: 400px;
   width: calc(100% - 400px);
+  z-index: 2;
 }
 .color_1{
   color: #FF23B2;
